@@ -1,0 +1,279 @@
+#MyNewCanvas {
+    position: absolute;
+    top: 0;
+}
+.cw__inicio--main {
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    scroll-snap-type: y proximity;
+}
+
+.cw__scroll--snap {
+    scroll-snap-align: center;
+}
+
+.cw__background--radial {
+    background: radial-gradient(
+        circle,
+        rgba(0, 103, 188, 1) 0%,
+        rgba(50, 68, 130, 1) 51%,
+        rgb(10, 8, 19) 100%
+    );
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+}
+
+.cw__canvas--back {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 0px;
+}
+
+.cw__banner--inicio {
+    position: absolute;
+    bottom: 0;
+    height: calc(100vh - 90px);
+    width: 100%;
+    z-index: 99;
+}
+
+.cw__inicio--animation {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.cw-background-nc {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+/** persona */
+.cw__person--dark {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 426px;
+    z-index: 3;
+}
+
+.cw__person--dark > img {
+    position: absolute;
+    height: inherit;
+    bottom: -14%;
+    padding: 0;
+    margin: 0;
+}
+
+.tail {
+    animation: ktail 3s infinite;
+}
+
+.hair {
+    animation: khair 5s ease-in-out infinite;
+}
+
+.campa {
+    animation: kcamp 3s infinite;
+    opacity: 0.9;
+}
+
+.campa2 {
+    animation: kcamp2 4s infinite;
+    opacity: 0.87;
+}
+.campa {
+    opacity: 0.9;
+    transform: translateX(3px) rotateZ(-3deg);
+}
+.campa2 {
+    transform: translateX(-3px) rotateZ(3deg);
+    opacity: 0.87;
+}
+/** nube */
+.cw__cloud--dark > img {
+    width: 100%;
+    opacity: 0.35;
+}
+/** estrella */
+.cw__new--start {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+.cw__img--start,
+.cw__new--light {
+    position: absolute;
+}
+
+.cw__img--start {
+    height: 80px;
+    z-index: 2;
+    opacity: 1;
+}
+
+.cw__new--light {
+    background: rgb(176, 219, 255);
+    background: radial-gradient(
+        circle,
+        rgba(176, 219, 255, 0.4) 0%,
+        rgba(5, 160, 244, 0.3) 48%,
+        rgba(115, 159, 214, 0) 80%
+    );
+    border-radius: 50%;
+}
+
+.cw__new--start > .trace-h {
+    width: 85%;
+    height: 12px;
+}
+
+.cw__new--start > .trace-v {
+    width: 12px;
+    height: 69%;
+}
+/** luciernagas */
+.cw__luciern--full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.cw__luciern {
+    position: absolute;
+    border-radius: 50%;
+    border-color: rgb(19, 139, 235);
+    background-color: rgb(223, 255, 255);
+    background: radial-gradient(
+        circle,
+        rgb(223, 255, 255) 0%,
+        rgb(19, 139, 235) 100%
+    );
+    box-shadow: inset 0px 0px 3px 1px rgb(19, 139, 235),
+        0px 0px 15px 10px rgb(19, 139, 235);
+    /* animation: cubeLun 5s linear infinite; */
+}
+
+/** mensaje */
+.cw__bg--message {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.cw__incio--titleBox {
+    font-size: 4em;
+    font-family: "Audiowide", cursive;
+    animation: text-win 10s linear;
+}
+
+.cw__incio--title {
+    border-bottom: 3px solid #fff;
+    letter-spacing: 3px;
+}
+
+.cw__title--message {
+    font-size: 0.35em;
+    letter-spacing: 2px;
+    height: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 10px rgba(15, 15, 15, 0.6);
+}
+
+.cw__servicios {
+    min-height: 100vh;
+    width: 100%;
+}
+/**
+ * !keyframes
+ **/
+@keyframes cubeLun {
+    50% {
+        box-shadow: inset 0px 0px 2px 0px rgb(19, 139, 235),
+            0px 0px 5px 3px rgb(19, 139, 235);
+    }
+    100% {
+        box-shadow: inset 0px 0px 3px 1px rgb(19, 139, 235),
+            0px 0px 15px 10px rgb(19, 139, 235);
+    }
+}
+@keyframes text-win {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ktail {
+    50% {
+        transform: translateX(3px) rotateZ(-deg) scaleY(1.005);
+    }
+}
+
+@keyframes khair {
+    30% {
+        transform: scaleY(1.02) translateX(6px) rotateZ(-3deg) translateY(6px);
+    }
+    80% {
+        transform: scaleY(1.05) translateX(-2px) rotateZ(0.8deg) translateY(4px);
+    }
+}
+
+@keyframes kcamp {
+    50% {
+        transform: translateX(7px) rotateZ(-3deg);
+    }
+}
+
+@keyframes kcamp2 {
+    50% {
+        transform: translateX(-3px) rotateZ(3deg);
+    }
+}
+
+@keyframes cesped {
+    30% {
+        transform: scaleX(0.95) translateY(-2px);
+    }
+    80% {
+        transform: scaleX(1.03) translateY(5px);
+    }
+}
+
+.cw__project--image {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 325px;
+    box-shadow: -4px -4px 8px rgba(86, 131, 180, 0.6),
+        5px 5px 10px rgba(0, 0, 0, 0.4);
+    margin: 12px auto;
+}
+
+.cw__project--h{
+    height: 400px;
+}

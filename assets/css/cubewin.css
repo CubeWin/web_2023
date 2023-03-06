@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Audiowide";
+    src: url("../fonts/Audiowide-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open-Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-style: normal;
+}
+
+.cw__background--transparent {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cw__border--transparent {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.cw__border--transparent:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
