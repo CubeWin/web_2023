@@ -1,6 +1,6 @@
 const inputEmail = document.getElementById("emailSend");
 const respSend = document.getElementById("validSend");
-const URL = "https://cubewin.sempeperusac.com/assets/php/index.php";
+const URL = "./assets/php/index.php";
 
 const validEmail = (w) =>
     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(w);
