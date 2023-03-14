@@ -33,11 +33,15 @@ const sendContact = async function (mySubmit) {
                 `El "${inputEmail.value}" no cumple con el formato.`
             );
         }
-        const response = await fetch(URL, {
+        // JSON.stringify(Object.fromEntries(formdata))
+        // body: formdata,
+        // const response = await fetch(URL, {
+        const response = await fetch('https://cubewin.000webhostapp.com/mail/send', {
             method: "POST",
-            body: formdata,
+            body: JSON.stringify(Object.fromEntries(formdata)),
         });
-        console.log(response);
+        const result = await response.json();
+        console.log(result);
         if (!response) {
             throw new Error("No se pudo enviar el mensaje");
         }
@@ -51,6 +55,6 @@ const sendContact = async function (mySubmit) {
         respSend.style.color = "#FF6188";
         respSend.innerText = `=> ${error}`;
         mySubmit.innerHTML = '<i class="fa fa-send"></i> Enviar';
-        console.error(`fallo en el mensajer => ${error}`);
+        console.error(`fallo en el mensaje => ${error}`);
     }
 };
